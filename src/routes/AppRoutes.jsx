@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Bookmarks from "../pages/Bookmarks"
+import NotFound from "../pages/NotFound";
 import PublicRoute from "../components/PublicRoute";
 import ProtectedRoute from "../components/ProtectedRoute";
 
@@ -15,6 +16,7 @@ const AppRoutes = () => {
             <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
 
             <Route path="/bookmarks" element={<ProtectedRoute><Bookmarks /></ProtectedRoute>} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     )
 }

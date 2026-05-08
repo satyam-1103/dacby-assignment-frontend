@@ -1,13 +1,12 @@
-import { Navigate } from "react-router-dom";
-
 import { useAuth } from "../contexts/AuthContext";
+import Unauthorized from "../pages/Unauthorized";
 
 const ProtectedRoute = ({ children }) => {
     const { token } = useAuth();
-    // Redirect back to unauthenticated users to login route
 
+    // If user is not authenticated, show a friendly unauthorized page
     if (!token) {
-        return <Navigate to="/login" replace />
+        return <Unauthorized />;
     }
 
     return children;
