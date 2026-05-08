@@ -1,8 +1,14 @@
-import React from 'react'
+import { Toaster } from 'react-hot-toast'
+import AppRoutes from './routes/AppRoutes'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Toaster position='bottom-right' />
+      <Navbar />
+      <AppRoutes />
+    </>
   )
 }
 
